@@ -1,0 +1,436 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: C:\Users\use-rian\Downloads\adaptive_runtime_tier1\adaptive_runtime
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 224
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 58
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 13017
+    content: "\e[2J\e[m\e[HWindows PowerShell\r\nCopyright (C) Microsoft Corporation. All rights reserved.\r\n\r\nTry the new cross-platform PowerShell https://aka.ms/pscore6\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h\e[25l\e[6;1H\e[?25h"
+  - delay: 17819
+    content: 'PS C:\Users\use-rian\Downloads\adaptive_runtime_tier1\adaptive_runtime> '
+  - delay: 5065
+    content: "\e[?25l"
+  - delay: 32
+    content: "\e[93m^D\e[?25h"
+  - delay: 37214
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_record.py\e[?25h"
+  - delay: 2612
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_record.p \b\e[?25h"
+  - delay: 494
+    content: "\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_record. \b\e[?25h"
+  - delay: 23
+    content: "\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_record \b\e[?25h"
+  - delay: 18
+    content: "\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_recor \b\e[?25h"
+  - delay: 26
+    content: "\e[?25l"
+  - delay: 20
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_reco \b\e[?25h"
+  - delay: 21
+    content: "\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_rec \b\e[?25h"
+  - delay: 31
+    content: "\e[?25l"
+  - delay: 16
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_re \b\e[?25h"
+  - delay: 25
+    content: "\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_r \b\e[?25h"
+  - delay: 18
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[6;73H^Dpython\e[m demo_ \b\e[?25h"
+  - delay: 29
+    content: "\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[6;73H^Dpython\e[m demo \b\e[?25h"
+  - delay: 23
+    content: "\e[?25l"
+  - delay: 24
+    content: "\e[93m\e[6;73H^Dpython\e[m dem \b\e[?25h"
+  - delay: 17
+    content: "\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[6;73H^Dpython\e[m de \b\e[?25h"
+  - delay: 29
+    content: "\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[6;73H^Dpython\e[m d \b\e[?25h"
+  - delay: 24
+    content: "\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[6;73H^Dpython\e[m  \b\e[?25h"
+  - delay: 18
+    content: "\e[?25l"
+  - delay: 13
+    content: "\e[93m\e[6;73H^Dpython\e[m \b\e[?25h"
+  - delay: 28
+    content: "\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[6;73H^Dpytho\e[m \b\e[?25h"
+  - delay: 22
+    content: "\e[?25l"
+  - delay: 25
+    content: "\e[93m\e[6;73H^Dpyth\e[m \b\e[?25h"
+  - delay: 15
+    content: "\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[6;73H^Dpyt\e[m \b\e[?25h"
+  - delay: 24
+    content: "\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[6;73H^Dpy\e[m \b\e[?25h"
+  - delay: 17
+    content: "\e[?25l"
+  - delay: 14
+    content: "\e[93m\e[6;73H^Dp\e[m \b\e[?25h"
+  - delay: 26
+    content: "\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[6;73H^D\e[m \b\e[?25h"
+  - delay: 19
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[6;73H  \e[6;73H\e[?25h"
+  - delay: 1620
+    content: "\e[?25l"
+  - delay: 15
+    content: "\e[93mpython\e[m demo_record.p\e[?25h"
+  - delay: 15
+    content: "\e[25l\e[93m\e[6;73Hpython\e[m demo_record.py\e[?25h"
+  - delay: 1526
+    content: "\r\n"
+  - delay: 912
+    content: "\e[1m\e[97m\r\n  Adaptive Runtime\e[m  Runtime Intelligence Layer — Full Demo\r\n"
+  - delay: 16
+    content: "\r\n"
+  - delay: 499
+    content: "\e[1m\e[97m\r\n  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  - delay: 15
+    content: "\e[25l\e[m\r\n  \e[1m\e[97m  DEMO 1 — Basic Agent\e[m  (agent_demo.py)\e[14X\e[1m\e[97m\r\n  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[15;1H\e[?25h"
+  - delay: 404
+    content: "\e[m\e[32m[19:42:15][STATE_ENGINE]\e[m No prior state found for agent 'demo-agent'\r\n"
+  - delay: 15
+    content: "\e[25l\e[32m[19:42:15][RUNTIME]\e[m Runtime started  agent_id='demo-agent'\r\n  [\e[1m\e[96mRUNTIME\e[m]  \e[32m✓\e[m Agent started: \e[1m\e[97mdemo-agent\e[m\e[18X\e[19;1H\e[?25h"
+  - delay: 296
+    content: "\e[32m[19:42:15][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n"
+  - delay: 23
+    content: "\e[32m[19:42:15][RUNTIME]\e[m Event received: service_overload\e[85X\e[32m\r\n[19:42:15][CONTEXT_ENGINE]\e[m Context → risk=high  stability=low  ctx=resource_pressure  pressure=0.65\e[38X\e[32m\r\n[19:42:15][RUNTIME]\e[m [Context Engine] risk=high  stability=low  pressure=0.65\e[61X\e[32m\r\n[19:42:15][CONFIDENCE_ENGINE]\e[m Confidence → base=0.59  decay=1.00  hist=1.00  ctx=0.75  final=0.4395\e[38X\e[32m\r\n[19:42:15][RUNTIME]\e[m [Confidence Engine] confidence=0.4395\e[80X\e[32m\r\n[19:42:15][DECISION_ENGINE]\e[m Decision → action=throttle_requests  confidence=0.440  reason=resource_pressure_low_confidence  priority=high\e[32m\r\n[19:42:15][RUNTIME]\e[m [Decision Engine] ACTION: THROTTLE_REQUESTS\e[74X\e[32m\r\n[19:42:15][STATE_ENGINE]\e[m State persisted for agent 'demo-agent'\e[74X\e[32m\r\n[19:42:15][RUNTIME]\e[m [State Engine] State persisted\e[87X\e[32m\r\n[19:42:15][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[72X\r\n\e[137X\r\n  [\e[1m\e[95mEVENT\e[m]  \e[97mservice_overload\e[9X\e[m\e[9C→ \e[1m\e[97mthrottle_requests\e[11X\e[m\e[11Cconf=\e[32m0.440\e[m  [\e[31mHIGH\e[m]\e[53X\e[36m\r\n[19:42:15][EVENT_BUS]\e[m No handlers for event 'service_overload'\e[75X\r\n"
+  - delay: 350
+    content: "\e[32m[19:42:15][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n"
+  - delay: 24
+    content: "\e[32m[19:42:15][RUNTIME]\e[m Event received: anomaly_detected\e[66X\e[32m\r\n[19:42:15][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=anomaly_signal  pressure=0.32\e[20X\e[32m\r\n[19:42:15][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.32\e[40X\e[32m\r\n[19:42:15][CONFIDENCE_ENGINE]\e[m Confidence → base=0.62  decay=1.00  hist=1.00  ctx=1.00  final=0.6200\e[19X\e[32m\r\n[19:42:15][RUNTIME]\e[m [Confidence Engine] confidence=0.6200\e[61X\e[32m\r\n[19:42:15][DECISION_ENGINE]\e[m Decision → action=flag_for_review  confidence=0.620  reason=anomaly_detected  priority=low\e[32m\r\n[19:42:15][RUNTIME]\e[m [Decision Engine] ACTION: FLAG_FOR_REVIEW\e[57X\e[32m\r\n[19:42:15][STATE_ENGINE]\e[m State persisted for agent 'demo-agent'\e[55X\e[32m\r\n[19:42:15][RUNTIME]\e[m [State Engine] State persisted\e[68X\e[32m\r\n[19:42:15][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[53X\r\n\e[118X\r\n  [\e[1m\e[95mEVENT\e[m]  \e[97manomaly_detected\e[9X\e[m\e[9C→ \e[1m\e[97mflag_for_review\e[13X\e[m\e[13Cconf=\e[32m0.620\e[m  [\e[32mLOW\e[m]\e[35X\e[36m\r\n[19:42:15][EVENT_BUS]\e[m No handlers for event 'anomaly_detected'\e[56X\r\n"
+  - delay: 334
+    content: "\e[32m[19:42:16][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n"
+  - delay: 14
+    content: "\e[32m[19:42:16][RUNTIME]\e[m Event received: timeout\e[70X\e[32m\r\n[19:42:16][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=latency_issue  pressure=0.22\e[16X\e[32m\r\n[19:42:16][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.22\e[35X\e[32m\r\n[19:42:16][CONFIDENCE_ENGINE]\e[m Confidence → base=0.66  decay=1.00  hist=1.00  ctx=1.00  final=0.6600\e[14X\e[32m\r\n[19:42:16][RUNTIME]\e[m [Confidence Engine] confidence=0.6600\e[56X\e[32m\r\n[19:42:16][DECISION_ENGINE]\e[m Decision → action=cache_warmup  confidence=0.660  reason=latency_signal  priority=low\e[32m\r\n[19:42:16][RUNTIME]\e[m [Decision Engine] ACTION: CACHE_WARMUP\e[55X\e[32m\r\n[19:42:16][STATE_ENGINE]\e[m State persisted for agent 'demo-agent'\e[50X\e[32m\r\n[19:42:16][RUNTIME]\e[m [State Engine] State persisted\e[63X\e[32m\r\n[19:42:16][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[48X\r\n"
+  - delay: 8
+    content: "\n  [\e[1m\e[95mEVENT\e[m]  \e[97mtimeout\e[18X\e[m\e[18C→ \e[1m\e[97mcache_warmup\e[16X\e[m\e[16Cconf=\e[32m0.660\e[m  [\e[32mLOW\e[m]\e[K\r\n\e[36m[19:42:16][EVENT_BUS]\e[m No handlers for event 'timeout'\e[K\r\n"
+  - delay: 352
+    content: "\e[32m[19:42:16][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:16][RUNTIME]\e[m Event received: degraded_service\r"
+  - delay: 5
+    content: "\n\e[32m[19:42:16][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=service_degradation  pressure=0.33\e[K\r"
+  - delay: 6
+    content: "\n\e[32m[19:42:16][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.33\e[K\r\n\e[32m[19:42:16][CONFIDENCE_ENGINE]\e[m Confidence → base=0.64  decay=1.00  hist=1.00  ctx=1.00  final=0.6400\e[K\r\n\e[32m[19:42:16][RUNTIME]\e[m [Confidence Engine] confidence=0.6400\e[K\r"
+  - delay: 12
+    content: "\n\e[32m[19:42:16][DECISION_ENGINE]\e[m Decision → action=health_check  confidence=0.640  reason=service_degraded  priority=low\e[K\r\n\e[32m[19:42:16][RUNTIME]\e[m [Decision Engine] ACTION: HEALTH_CHECK\e[K\r\n\e[32m[19:42:16][STATE_ENGINE]\e[m State persisted for agent 'demo-agent'\e[K\r\n\e[32m[19:42:16][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:16][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  [\e[1m\e[95mEVENT\e[m]  \e[97mdegraded_service\e[9X\e[m\e[9C→ \e[1m\e[97mhealth_check\e[16X\e[m\e[16Cconf=\e[32m0.640\e[m  [\e[32mLOW\e[m]\r\n\e[36m[19:42:16][EVENT_BUS]\e[m No handlers for event 'degraded_service'\e[K\r"
+  - delay: 5
+    content: |+
+
+  - delay: 341
+    content: "\e[32m[19:42:17][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:17][RUNTIME]\e[m Event received: recovery_needed\r\n\e[32m[19:42:17][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=self_healing  pressure=0.10\e[K\r"
+  - delay: 7
+    content: "\n\e[32m[19:42:17][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.10\e[K\r\n\e[32m[19:42:17][CONFIDENCE_ENGINE]\e[m Confidence → base=0.69  decay=1.00  hist=1.00  ctx=1.00  final=0.6900\e[K\r\n\e[32m[19:42:17][RUNTIME]\e[m [Confidence Engine] confidence=0.6900\e[K\r"
+  - delay: 7
+    content: "\n\e[32m[19:42:17][DECISION_ENGINE]\e[m Decision → action=run_recovery  confidence=0.690  reason=recovery_requested  priority=low\e[K\r\n\e[32m[19:42:17][RUNTIME]\e[m [Decision Engine] ACTION: RUN_RECOVERY\e[K\r\n\e[32m[19:42:17][STATE_ENGINE]\e[m State persisted for agent 'demo-agent'\e[K\r\n\e[32m[19:42:17][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:17][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  [\e[1m\e[95mEVENT\e[m]  \e[97mrecovery_needed\e[10X\e[m\e[10C→ \e[1m\e[97mrun_recovery\e[16X\e[m\e[16Cconf=\e[32m0.690\e[m  [\e[32mLOW\e[m]\r\n\e[36m[19:42:17][EVENT_BUS]\e[m No handlers for event 'recovery_needed'\e[K\r"
+  - delay: 10
+    content: |+
+
+  - delay: 337
+    content: "\n  [\e[1m\e[96mMETRICS\e[m]  Summary:\e[K"
+  - delay: 5
+    content: "\r\n    runtime.events: {'last': 1, 'avg': 1.0, 'count': 5}\r"
+  - delay: 10
+    content: |+
+
+  - delay: 78
+    content: "    context.pressure: {'last': 0.105, 'avg': 0.3255, 'count': 5}\r\n"
+  - delay: 91
+    content: "    confidence.final: {'last': 0.69, 'avg': 0.6099, 'count': 5}\r\n"
+  - delay: 91
+    content: "    decision.confidence: {'last': 0.69, 'avg': 0.6099, 'count': 5}\r\n"
+  - delay: 91
+    content: "    state.saves: {'last': 1, 'avg': 1.0, 'count': 5}\r\n"
+  - delay: 93
+    content: "\e[32m[19:42:17][RUNTIME]\e[m Runtime stopped  agent_id='demo-agent'\r\n"
+  - delay: 811
+    content: "\n\e[1m\e[97m  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[m\e[K"
+  - delay: 14
+    content: "\r\n  \e[1m\e[97m  DEMO 2 — Monitoring + Event Bus\e[m  (monitoring_demo.py)\e[K\r\n\e[1m\e[97m  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[m\e[K\r\n\n"
+  - delay: 398
+    content: "\e[36m[19:42:19][EVENT_BUS]\e[m Subscribed handler 'on_anomaly' to event 'anomaly_detected'\r\n\e[32m[19:42:19][STATE_ENGINE]\e[m No prior state found for agent 'prod-monitor'\r\n\e[32m[19:42:19][RUNTIME]\e[m Runtime started  agent_id='prod-monitor'\e[K\r\n  [\e[1m\e[96mRUNTIME\e[m]  \e[32m✓\e[m Monitoring agent started\e[K\r\n"
+  - delay: 12
+    content: |+
+
+  - delay: 298
+    content: "\e[32m[19:42:19][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:19][RUNTIME]\e[m Event received: service_overload\r"
+  - delay: 5
+    content: "\n\e[32m[19:42:19][CONTEXT_ENGINE]\e[m Context → risk=high  stability=low  ctx=resource_pressure  pressure=0.69\e[K\r"
+  - delay: 7
+    content: "\n\e[32m[19:42:19][RUNTIME]\e[m [Context Engine] risk=high  stability=low  pressure=0.69\e[K\r\n\e[32m[19:42:19][CONFIDENCE_ENGINE]\e[m Confidence → base=0.57  decay=1.00  hist=1.00  ctx=0.75  final=0.4260\e[K\r"
+  - delay: 13
+    content: "\n\e[32m[19:42:19][RUNTIME]\e[m [Confidence Engine] confidence=0.4260\e[K\r\n\e[32m[19:42:19][DECISION_ENGINE]\e[m Decision → action=throttle_requests  confidence=0.426  reason=resource_pressure_low_confidence  priority=high\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m [Decision Engine] ACTION: THROTTLE_REQUESTS\e[K\r\n\e[32m[19:42:19][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  \e[90m[1/8]\e[m  \e[97mservice_overload\e[9X\e[m\e[9C→ \e[1m\e[97mthrottle_requests\e[11X\e[m\e[11C[\e[31mHIGH\e[m]\r\n\e[36m[19:42:19][EVENT_BUS]\e[m No handlers for event 'service_overload'\e[K\r\n"
+  - delay: 399
+    content: "\e[32m[19:42:19][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:19][RUNTIME]\e[m Event received: anomaly_detected\r\n\e[32m[19:42:19][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=anomaly_signal  pressure=0.35\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.35\e[K\r\n\e[32m[19:42:19][CONFIDENCE_ENGINE]\e[m Confidence → base=0.60  decay=1.00  hist=1.00  ctx=1.00  final=0.6020\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m [Confidence Engine] confidence=0.6020\e[K\r\n\e[32m[19:42:19][DECISION_ENGINE]\e[m Decision → action=flag_for_review  confidence=0.602  reason=anomaly_detected  priority=low\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m [Decision Engine] ACTION: FLAG_FOR_REVIEW\e[K\r\n\e[32m[19:42:19][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:19][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  \e[90m[2/8]\e[m  \e[97manomaly_detected\e[9X\e[m\e[9C→ \e[1m\e[97mflag_for_review\e[13X\e[m\e[13C[\e[32mLOW\e[m]\e[K\r\n  [\e[1m\e[93mBUS\e[m]  \e[33m⚡ anomaly_detected handler fired\e[m  severity=0.74\e[K\r"
+  - delay: 10
+    content: |+
+
+  - delay: 397
+    content: "\e[32m[19:42:20][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:20][RUNTIME]\e[m Event received: auth_failure\r\n\e[32m[19:42:20][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=security_signal  pressure=0.19\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.19\e[K\r\n\e[32m[19:42:20][CONFIDENCE_ENGINE]\e[m Confidence → base=0.64  decay=1.00  hist=1.00  ctx=1.00  final=0.6400\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [Confidence Engine] confidence=0.6400\e[K\r\n\e[32m[19:42:20][DECISION_ENGINE]\e[m Decision → action=trigger_security_audit  confidence=0.640  reason=security_event  priority=low\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [Decision Engine] ACTION: TRIGGER_SECURITY_AUDIT\e[K\r\n\e[32m[19:42:20][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  \e[90m[3/8]\e[m  \e[97mauth_failure\e[13X\e[m\e[13C→ \e[1m\e[97mtrigger_security_audit      \e[m[\e[32mLOW\e[m]\e[K\r\n\e[36m[19:42:20][EVENT_BUS]\e[m No handlers for event 'auth_failure'\e[K\r"
+  - delay: 6
+    content: |+
+
+  - delay: 403
+    content: "\e[32m[19:42:20][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:20][RUNTIME]\e[m Event received: timeout\r\n\e[32m[19:42:20][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=latency_issue  pressure=0.24\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.24\e[K\r\n\e[32m[19:42:20][CONFIDENCE_ENGINE]\e[m Confidence → base=0.66  decay=1.00  hist=1.00  ctx=1.00  final=0.6600\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [Confidence Engine] confidence=0.6600\e[K\r\n\e[32m[19:42:20][DECISION_ENGINE]\e[m Decision → action=cache_warmup  confidence=0.660  reason=latency_signal  priority=low\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [Decision Engine] ACTION: CACHE_WARMUP\e[K\r\n\e[32m[19:42:20][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:20][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n"
+  - delay: 8
+    content: "\n  \e[90m[4/8]\e[m  \e[97mtimeout\e[18X\e[m\e[18C→ \e[1m\e[97mcache_warmup\e[16X\e[m\e[16C[\e[32mLOW\e[m]\e[K\r\n\e[36m[19:42:20][EVENT_BUS]\e[m No handlers for event 'timeout'\r"
+  - delay: 9
+    content: |+
+
+  - delay: 392
+    content: "\e[32m[19:42:21][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r"
+  - delay: 5
+    content: "\n\e[32m[19:42:21][RUNTIME]\e[m Event received: degraded_service\r"
+  - delay: 6
+    content: "\n\e[32m[19:42:21][CONTEXT_ENGINE]\e[m Context → risk=medium  stability=stable  ctx=service_degradation  pressure=0.36\e[K\r"
+  - delay: 12
+    content: "\n\e[32m[19:42:21][RUNTIME]\e[m [Context Engine] risk=medium  stability=stable  pressure=0.36\e[K\r\n\e[32m[19:42:21][CONFIDENCE_ENGINE]\e[m Confidence → base=0.63  decay=1.00  hist=1.00  ctx=0.90  final=0.5670\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [Confidence Engine] confidence=0.5670\e[K\r"
+  - delay: 5
+    content: "\n\e[32m[19:42:21][DECISION_ENGINE]\e[m Decision → action=health_check  confidence=0.567  reason=service_degraded  priority=normal\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [Decision Engine] ACTION: HEALTH_CHECK\r\n\e[32m[19:42:21][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:21][RECOVERY_ENGINE]\e[m Checkpoint #1 created (keys: ['last_event', 'last_action', 'last_risk', 'last_confidence', '_updated'])\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [Recovery Engine] Checkpoint created (#5)\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  \e[90m[5/8]\e[m  \e[97mdegraded_service\e[9X\e[m\e[9C→ \e[1m\e[97mhealth_check\e[16X\e[m\e[16C[\e[33mNORMAL\e[m]\e[K\r\n\e[36m[19:42:21][EVENT_BUS]\e[m No handlers for event 'degraded_service'\e[K\r\n"
+  - delay: 404
+    content: "\e[32m[19:42:21][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:21][RUNTIME]\e[m Event received: recovery_needed\r"
+  - delay: 5
+    content: "\n\e[32m[19:42:21][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=self_healing  pressure=0.10\e[K\r"
+  - delay: 10
+    content: "\n\e[32m[19:42:21][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.10\e[K\r\n\e[32m[19:42:21][CONFIDENCE_ENGINE]\e[m Confidence → base=0.69  decay=1.00  hist=1.00  ctx=1.00  final=0.6900\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [Confidence Engine] confidence=0.6900\e[K\r"
+  - delay: 11
+    content: "\n\e[32m[19:42:21][DECISION_ENGINE]\e[m Decision → action=run_recovery  confidence=0.690  reason=recovery_requested  priority=low\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [Decision Engine] ACTION: RUN_RECOVERY\e[K\r\n\e[32m[19:42:21][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\r\n\e[32m[19:42:21][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n"
+  - delay: 7
+    content: "\n  \e[90m[6/8]\e[m  \e[97mrecovery_needed\e[10X\e[m\e[10C→ \e[1m\e[97mrun_recovery\e[16X\e[m\e[16C[\e[32mLOW\e[m]\e[K\r\n\e[36m[19:42:21][EVENT_BUS]\e[m No handlers for event 'recovery_needed'\e[K\r\n"
+  - delay: 400
+    content: "\e[32m[19:42:21][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:21][RUNTIME]\e[m Event received: anomaly_detected\r\n\e[32m[19:42:21][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=anomaly_signal  pressure=0.28\e[K\r"
+  - delay: 13
+    content: "\n\e[32m[19:42:21][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.28\e[K\r\n\e[32m[19:42:21][CONFIDENCE_ENGINE]\e[m Confidence → base=0.59  decay=1.00  hist=1.00  ctx=1.00  final=0.5900\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [Confidence Engine] confidence=0.5900\e[K\r"
+  - delay: 6
+    content: "\n\e[32m[19:42:21][DECISION_ENGINE]\e[m Decision → action=flag_for_review  confidence=0.590  reason=anomaly_detected  priority=low\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [Decision Engine] ACTION: FLAG_FOR_REVIEW\e[K\r\n\e[32m[19:42:21][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:21][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n"
+  - delay: 5
+    content: "\n  \e[90m[7/8]\e[m  \e[97manomaly_detected\e[9X\e[m\e[9C→ \e[1m\e[97mflag_for_review\e[13X\e[m\e[13C[\e[32mLOW\e[m]\e[K\r\n  [\e[1m\e[93mBUS\e[m]  \e[33m⚡ anomaly_detected handler fired\e[m  severity=0.8\e[K\r\n"
+  - delay: 407
+    content: "\e[32m[19:42:22][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:22][RUNTIME]\e[m Event received: timeout\r\n\e[32m[19:42:22][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=latency_issue  pressure=0.17\e[K\r\n\e[32m[19:42:22][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.17\e[K\r"
+  - delay: 8
+    content: "\n\e[32m[19:42:22][CONFIDENCE_ENGINE]\e[m Confidence → base=0.67  decay=1.00  hist=1.00  ctx=1.00  final=0.6740\e[K\r\n\e[32m[19:42:22][RUNTIME]\e[m [Confidence Engine] confidence=0.6740\e[K\r\n\e[32m[19:42:22][DECISION_ENGINE]\e[m Decision → action=cache_warmup  confidence=0.674  reason=latency_signal  priority=low\e[K\r"
+  - delay: 12
+    content: "\n\e[32m[19:42:22][RUNTIME]\e[m [Decision Engine] ACTION: CACHE_WARMUP\e[K\r\n\e[32m[19:42:22][STATE_ENGINE]\e[m State persisted for agent 'prod-monitor'\r\n\e[32m[19:42:22][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:22][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  \e[90m[8/8]\e[m  \e[97mtimeout\e[18X\e[m\e[18C→ \e[1m\e[97mcache_warmup\e[16X\e[m\e[16C[\e[32mLOW\e[m]\e[K\r\n\e[36m[19:42:22][EVENT_BUS]\e[m No handlers for event 'timeout'\e[K\r\n"
+  - delay: 398
+    content: "\e[32m[19:42:22][RUNTIME]\e[m Runtime stopped  agent_id='prod-monitor'\r\n"
+  - delay: 812
+    content: "\n\e[1m\e[97m  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[m\e[K"
+  - delay: 7
+    content: "\r\n  \e[1m\e[97m  DEMO 3 — Retry + Crash Recovery\e[m  (automation_demo.py)\e[K\r\n\e[1m\e[97m  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[m\e[K\r"
+  - delay: 5
+    content: |+
+
+  - delay: 5
+    content: |+
+
+  - delay: 387
+    content: "\e[32m[19:42:24][STATE_ENGINE]\e[m No prior state found for agent 'auto-recover'\r\n\e[32m[19:42:24][RUNTIME]\e[m Runtime started  agent_id='auto-recover'\r\n  [\e[1m\e[96mRUNTIME\e[m]  \e[32m✓\e[m Recovery agent started\e[K\r\n"
+  - delay: 12
+    content: |+
+
+  - delay: 295
+    content: "\e[32m[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:24][RUNTIME]\e[m Event received: service_overload\r"
+  - delay: 5
+    content: "\n\e[32m[19:42:24][CONTEXT_ENGINE]\e[m Context → risk=medium  stability=degraded  ctx=resource_pressure  pressure=0.46\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m [Context Engine] risk=medium  stability=degraded  pressure=0.46\e[K\r"
+  - delay: 6
+    content: "\n\e[32m[19:42:24][CONFIDENCE_ENGINE]\e[m Confidence → base=0.59  decay=1.00  hist=1.00  ctx=0.90  final=0.5310\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m [Confidence Engine] confidence=0.5310\e[K\r\n\e[32m[19:42:24][DECISION_ENGINE]\e[m Decision → action=optimize_resources  confidence=0.531  reason=medium_resource_pressure  priority=normal\e[K\r"
+  - delay: 7
+    content: "\n\e[32m[19:42:24][RUNTIME]\e[m [Decision Engine] ACTION: OPTIMIZE_RESOURCES\e[K\r\n\e[32m[19:42:24][STATE_ENGINE]\e[m State persisted for agent 'auto-recover'\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m [State Engine] State persisted\r\n\e[32m[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r"
+  - delay: 5
+    content: "\n\n  [\e[1m\e[95mEVENT\e[m]  \e[97mservice_overload\e[9X\e[m\e[9C→ \e[1m\e[97moptimize_resources\e[m\e[K\r\n\e[36m[19:42:24][EVENT_BUS]\e[m No handlers for event 'service_overload'\e[K\r\n"
+  - delay: 299
+    content: "\e[32m[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\e[32m[19:42:24][RUNTIME]\e[m Event received: anomaly_detected\r\n\e[32m[19:42:24][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=anomaly_signal  pressure=0.24\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.24\e[K\r\n\e[32m[19:42:24][CONFIDENCE_ENGINE]\e[m Confidence → base=0.61  decay=1.00  hist=1.00  ctx=1.00  final=0.6100\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m [Confidence Engine] confidence=0.6100\e[K\r\n\e[32m[19:42:24][DECISION_ENGINE]\e[m Decision → action=flag_for_review  confidence=0.610  reason=anomaly_detected  priority=low\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m [Decision Engine] ACTION: FLAG_FOR_REVIEW\e[K\r\n\e[32m[19:42:24][STATE_ENGINE]\e[m State persisted for agent 'auto-recover'\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\n  [\e[1m\e[95mEVENT\e[m]  \e[97manomaly_detected\e[9X\e[m\e[9C→ \e[1m\e[97mflag_for_review\e[m\e[K\r\n\e[36m[19:42:24][EVENT_BUS]\e[m No handlers for event 'anomaly_detected'\e[K\r"
+  - delay: 7
+    content: |+
+
+  - delay: 293
+    content: "\e[32m[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r"
+  - delay: 5
+    content: "\n\e[32m[19:42:24][RUNTIME]\e[m Event received: degraded_service\r"
+  - delay: 6
+    content: "\n\e[32m[19:42:24][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=service_degradation  pressure=0.21\e[K\r"
+  - delay: 18
+    content: "\n\e[32m[19:42:24][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.21\e[K\r\n\e[32m[19:42:24][CONFIDENCE_ENGINE]\e[m Confidence → base=0.63  decay=1.00  hist=1.00  ctx=1.00  final=0.6300\e[K\r"
+  - delay: 12
+    content: "\n\e[32m[19:42:24][RUNTIME]\e[m [Confidence Engine] confidence=0.6300\e[K\r\n\e[32m[19:42:25][DECISION_ENGINE]\e[m Decision → action=health_check  confidence=0.630  reason=service_degraded  priority=low\e[K\r\n\e[32m[19:42:25][RUNTIME]\e[m [Decision Engine] ACTION: HEALTH_CHECK\r\n\e[32m[19:42:25][STATE_ENGINE]\e[m State persisted for agent 'auto-recover'\e[K\r\n\e[32m[19:42:25][RUNTIME]\e[m [State Engine] State persisted\e[K\r\n\e[32m[19:42:25][RECOVERY_ENGINE]\e[m Checkpoint #1 created (keys: ['last_event', 'last_action', 'last_risk', 'last_confidence', '_updated'])\e[K\r\n\e[32m[19:42:25][RUNTIME]\e[m [Recovery Engine] Checkpoint created (#3)\e[K\r"
+  - delay: 7
+    content: "\n\e[32m[19:42:25][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n\n  [\e[1m\e[95mEVENT\e[m]  \e[97mdegraded_service\e[9X\e[m\e[9C→ \e[1m\e[97mhealth_check\e[m\e[K\r\n\e[36m[19:42:25][EVENT_BUS]\e[m No handlers for event 'degraded_service'\e[K\r\n"
+  - delay: 297
+    content: "\n  [\e[1m\e[91mRECOVERY\e[m]  Simulating crash...\e[K\r"
+  - delay: 11
+    content: |+
+
+  - delay: 597
+    content: "\e[33m[19:42:25][RECOVERY_ENGINE]\e[m [Recovery] Crash recovery initiated for 'auto-recover'\r\n\e[32m[19:42:25][STATE_ENGINE]\e[m State loaded for agent 'auto-recover' (keys: ['last_event', 'last_action', 'last_risk', 'last_confidence', '_updated'])\r\n\e[32m[19:42:25][RECOVERY_ENGINE]\e[m [Recovery] State recovered from persistent store.\e[K\r\n  [\e[1m\e[91mRECOVERY\e[m]  \e[32m✓\e[m State restored: ['last_event', 'last_action', 'last_risk', 'last_confidence', '_updated']\e[K\r\n"
+  - delay: 11
+    content: |+
+
+  - delay: 504
+    content: "  [\e[1m\e[93mRETRY\e[m]  Running flaky task with exponential back-off...\r\n"
+  - delay: 300
+    content: "  [\e[1m\e[93mRETRY\e[m]  \e[31m✗\e[m Attempt 1 failed — retrying...\r\n"
+  - delay: 515
+    content: "  [\e[1m\e[93mRETRY\e[m]  \e[31m✗\e[m Attempt 2 failed — retrying...\r\n"
+  - delay: 516
+    content: "\e[33m[19:42:27][RECOVERY_ENGINE]\e[m Attempt 1/3 failed: Simulated failure #1 — retrying in 1.0s\r\n"
+  - delay: 1003
+    content: "\e[33m[19:42:28][RECOVERY_ENGINE]\e[m Attempt 2/3 failed: Simulated failure #2 — retrying in 2.0s\r\n"
+  - delay: 2009
+    content: "\e[32m[19:42:30][RECOVERY_ENGINE]\e[m Retry succeeded on attempt 3\r\n  [\e[1m\e[93mRETRY\e[m]  \e[32m✓\e[m Success on attempt #3\r\n\n\e[32m[19:42:30][RUNTIME]\e[m Runtime stopped  agent_id='auto-recover'\e[K\r"
+  - delay: 13
+    content: |+
+
+  - delay: 803
+    content: "  ──────────────────────────────────────────────────────\r\n  [\e[1m\e[92mDONE\e[m]  All 3 demos complete.\r\n  No GPU. No cloud. Just Python + asyncio + SQLite.\r\n"
+  - delay: 14
+    content: |+
+
+  - delay: 147
+    content: 'PS C:\Users\use-rian\Downloads\adaptive_runtime_tier1\adaptive_runtime> '
+  - delay: 27430
+    content: "\e[?25l"
+  - delay: 10
+    content: "\e[92mexit\e[?25h"
+  - delay: 965
+    content: "\e[25l\e[m\e[32m\e[H[19:42:24][STATE_ENGINE]\e[m State persisted for agent 'auto-recover'\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m [State Engine] State persisted\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\e[K\r\n  [\e[1m\e[95mEVENT\e[m]  \e[97mservice_overload\e[9X\e[m\e[9C→ \e[1m\e[97moptimize_resources\e[m\e[K\e[36m\r\n[19:42:24][EVENT_BUS]\e[m No handlers for event 'service_overload'\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m Event received: anomaly_detected\e[K\e[32m\r\n[19:42:24][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=anomaly_signal  pressure=0.24\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.24\e[K\e[32m\r\n[19:42:24][CONFIDENCE_ENGINE]\e[m Confidence → base=0.61  decay=1.00  hist=1.00  ctx=1.00  final=0.6100\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m [Confidence Engine] confidence=0.6100\e[K\e[32m\r\n[19:42:24][DECISION_ENGINE]\e[m Decision → action=flag_for_review  confidence=0.610  reason=anomaly_detected  priority=low\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m [Decision Engine] ACTION: FLAG_FOR_REVIEW\e[K\e[32m\r\n[19:42:24][STATE_ENGINE]\e[m State persisted for agent 'auto-recover'\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m [State Engine] State persisted\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\e[K\r\n  [\e[1m\e[95mEVENT\e[m]  \e[97manomaly_detected\e[9X\e[m\e[9C→ \e[1m\e[97mflag_for_review\e[m\e[K\e[36m\r\n[19:42:24][EVENT_BUS]\e[m No handlers for event 'anomaly_detected'\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m Event received: degraded_service\e[K\e[32m\r\n[19:42:24][CONTEXT_ENGINE]\e[m Context → risk=low  stability=stable  ctx=service_degradation  pressure=0.21\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m [Context Engine] risk=low  stability=stable  pressure=0.21\e[K\e[32m\r\n[19:42:24][CONFIDENCE_ENGINE]\e[m Confidence → base=0.63  decay=1.00  hist=1.00  ctx=1.00  final=0.6300\e[K\e[32m\r\n[19:42:24][RUNTIME]\e[m [Confidence Engine] confidence=0.6300\e[K\e[32m\r\n[19:42:25][DECISION_ENGINE]\e[m Decision → action=health_check  confidence=0.630  reason=service_degraded  priority=low\e[K\e[32m\r\n[19:42:25][RUNTIME]\e[m [Decision Engine] ACTION: HEALTH_CHECK\e[K\e[32m\r\n[19:42:25][STATE_ENGINE]\e[m State persisted for agent 'auto-recover'\e[K\e[32m\r\n[19:42:25][RUNTIME]\e[m [State Engine] State persisted\e[K\e[32m\r\n[19:42:25][RECOVERY_ENGINE]\e[m Checkpoint #1 created (keys: ['last_event', 'last_action', 'last_risk', 'last_confidence', '_updated'])\e[K\e[32m\r\n[19:42:25][RUNTIME]\e[m [Recovery Engine] Checkpoint created (#3)\e[K\e[32m\r\n[19:42:25][RUNTIME]\e[m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[K\r\n\e[K\r\n  [\e[1m\e[95mEVENT\e[m]  \e[97mdegraded_service\e[9X\e[m\e[9C→ \e[1m\e[97mhealth_check\e[m\e[K\e[36m\r\n[19:42:25][EVENT_BUS]\e[m No handlers for event 'degraded_service'\e[K\r\n\e[K\r\n  [\e[1m\e[91mRECOVERY\e[m]  Simulating crash...\e[K\e[33m\r\n[19:42:25][RECOVERY_ENGINE]\e[m [Recovery] Crash recovery initiated for 'auto-recover'\e[K\e[32m\r\n[19:42:25][STATE_ENGINE]\e[m State loaded for agent 'auto-recover' (keys: ['last_event', 'last_action', 'last_risk', 'last_confidence', '_updated'])\e[K\e[32m\r\n[19:42:25][RECOVERY_ENGINE]\e[m [Recovery] State recovered from persistent store.\e[K\r\n  [\e[1m\e[91mRECOVERY\e[m]  \e[32m✓\e[m State restored: ['last_event', 'last_action', 'last_risk', 'last_confidence', '_updated']\e[K\r\n\e[K\r\n  [\e[1m\e[93mRETRY\e[m]  Running flaky task with exponential back-off...\e[K\r\n  [\e[1m\e[93mRETRY\e[m]  \e[31m✗\e[m Attempt 1 failed — retrying...\e[K\r\n  [\e[1m\e[93mRETRY\e[m]  \e[31m✗\e[m Attempt 2 failed — retrying...\e[K\e[33m\r\n[19:42:27][RECOVERY_ENGINE]\e[m Attempt 1/3 failed: Simulated failure #1 — retrying in 1.0s\e[K\e[33m\r\n[19:42:28][RECOVERY_ENGINE]\e[m Attempt 2/3 failed: Simulated failure #2 — retrying in 2.0s\e[K\e[32m\r\n[19:42:30][RECOVERY_ENGINE]\e[m Retry succeeded on attempt 3\e[K\r\n  [\e[1m\e[93mRETRY\e[m]  \e[32m✓\e[m Success on attempt #3\e[K\r\n\e[K\e[32m\r\n[19:42:30][RUNTIME]\e[m Runtime stopped  agent_id='auto-recover'\e[K\r\n  ──────────────────────────────────────────────────────\e[K\r\n  [\e[1m\e[92mDONE\e[m]  All 3 demos complete.\e[K\r\n  No GPU. No cloud. Just Python + asyncio + SQLite.\e[K\r\n\e[K\r\nPS C:\\Users\\use-rian\\Downloads\\adaptive_runtime_tier1\\adaptive_runtime> \e[92mexit\e[m\e[K\r\n\e[K\e[76C\e[?25h"
+  - delay: 7
+    content: "\r"
