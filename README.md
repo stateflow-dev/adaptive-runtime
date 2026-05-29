@@ -45,7 +45,7 @@ Production AI systems fail because of:
 ## See It Running
 
 <p align="center">
-  <img src="adaptive_runtime/render1779972984877.gif" width="860" alt="Adaptive Runtime Demo" />
+  <img src="render1779972984877.gif" width="860" alt="Adaptive Runtime Demo" />
 </p>
 
 ```
