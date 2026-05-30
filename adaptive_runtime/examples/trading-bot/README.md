@@ -87,7 +87,7 @@ Market Data Feed
 ## Run the Demo
 
 <p align="center">
-  <img src="trading-bot-demo.svg" width="860" alt="Trading Bot Recovery Demo" />
+  <img src="trading-bot-demo.png" width="860" alt="Trading Bot Recovery Demo" />
 </p>
 
 ```bash
