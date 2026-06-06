@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "adaptive-runtime"
@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Adaptive Runtime Layer for Stateful AI Systems"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "MIT" }
+license = "MIT"
 dependencies = [
     "pydantic>=2.0",
     "aiosqlite>=0.19",
@@ -21,3 +21,6 @@ dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+
+[tool.setuptools.packages.find]
+include = ["adaptive_runtime*"]

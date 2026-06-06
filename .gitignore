@@ -1,33 +1,48 @@
-# Runtime artifacts
-*.db
-*.db-shm
-*.db-wal
-
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-.Python
 
-# Testing / coverage
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-
-# Build / packaging
-dist/
-build/
-*.egg-info/
-*.egg
-
-# Virtual environments
+# Virtual env
 .venv/
 venv/
 env/
 
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
 # IDE
 .vscode/
 .idea/
-*.swp
+
+# Runtime
+adaptive_runtime.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+# Runtime database
+adaptive_runtime.db
+*.db
+*.sqlite
+
+# Python cache
+__pycache__/
+.pytest_cache/
+
+# Virtual environment
+.venv/
