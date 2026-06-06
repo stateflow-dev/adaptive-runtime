@@ -19,7 +19,7 @@
 
 > **Not** a chatbot framework. **Not** an LLM wrapper. **Not** a workflow builder.
 >
-> An **adaptive runtime intelligence layer** â€” the missing piece between your application logic and production reality.
+> An **adaptive runtime intelligence layer** — the missing piece between your application logic and production reality.
 
 ---
 
@@ -35,11 +35,11 @@ Your service in production:    Crashes. Loses state. Retries blindly. Dies silen
 
 Long-running systems fail in production because of:
 
-- ðŸ’¥ **No crash recovery** â€” state lost on restart
-- ðŸ§  **No memory** â€” service forgets context between sessions
-- ðŸ” **Retry chaos** â€” blind retries with no back-off
-- ðŸ“‰ **No confidence scoring** â€” decisions made without certainty
-- ðŸŒŠ **No contextual awareness** â€” can't adapt to changing conditions
+- 💥 **No crash recovery** — state lost on restart
+- 🧠 **No memory** — service forgets context between sessions
+- 🔁 **Retry chaos** — blind retries with no back-off
+- 📉 **No confidence scoring** — decisions made without certainty
+- 🌊 **No contextual awareness** — can't adapt to changing conditions
 
 **Adaptive Runtime fixes this.**
 
@@ -49,14 +49,14 @@ Long-running systems fail in production because of:
 
 Most frameworks focus on *what* a system should do.
 
-Adaptive Runtime focuses on *what happens* when the system has already been running for hours, days, or weeks â€” and something goes wrong.
+Adaptive Runtime focuses on *what happens* when the system has already been running for hours, days, or weeks — and something goes wrong.
 
 It provides:
 
-- **state persistence** â€” runtime memory that survives crashes and restarts
-- **contextual awareness** â€” understanding of current operating conditions
-- **confidence-aware decisions** â€” actions weighted by certainty, not just rules
-- **recovery workflows** â€” automatic restoration from checkpoints after failure
+- **state persistence** — runtime memory that survives crashes and restarts
+- **contextual awareness** — understanding of current operating conditions
+- **confidence-aware decisions** — actions weighted by certainty, not just rules
+- **recovery workflows** — automatic restoration from checkpoints after failure
 
 All of this without requiring a cloud service, LLM, or external orchestration platform.
 
@@ -76,7 +76,7 @@ All of this without requiring a cloud service, LLM, or external orchestration pl
 [16:08:13][STATE_ENGINE]     State persisted
 [16:08:13][RECOVERY_ENGINE]  Checkpoint #3 created
 
-  â†’ restart_service  [high]  conf=0.840
+  → restart_service  [high]  conf=0.840
 
 [16:08:14][RUNTIME]          Event received: anomaly_detected
 [16:08:14][CONTEXT_ENGINE]   risk=low   stability=stable  pressure=0.32
@@ -84,10 +84,10 @@ All of this without requiring a cloud service, LLM, or external orchestration pl
 [16:08:14][DECISION_ENGINE]  ACTION: FLAG_FOR_REVIEW
 [16:08:14][STATE_ENGINE]     State persisted
 
-  â†’ flag_for_review  [low]   conf=0.620
+  → flag_for_review  [low]   conf=0.620
 ```
 
-The runtime **evaluates conditions**, **selects actions**, **remembers state**, and **recovers** â€” automatically.
+The runtime **evaluates conditions**, **selects actions**, **remembers state**, and **recovers** — automatically.
 
 ---
 
@@ -95,31 +95,31 @@ The runtime **evaluates conditions**, **selects actions**, **remembers state**, 
 
 ```
 Event (CPU spike, anomaly, timeout, auth failure...)
-  â”‚
-  â–¼
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Context Engine â”‚  â†’ Analyzes conditions: risk, stability, pressure score
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-         â”‚
-         â–¼
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Confidence Engine   â”‚  â†’ Calculates adaptive confidence (with decay + history)
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-         â”‚
-         â–¼
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Decision Engine â”‚  â†’ Selects action: restart / throttle / rollback / recover...
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-         â”‚
-         â–¼
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚   State Engine   â”‚  â†’ Persists state to SQLite (survives crashes)
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-         â”‚
-         â–¼
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚   Recovery Engine    â”‚  â†’ Creates checkpoint, handles retry with back-off
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+  │
+  ▼
+┌─────────────────┐
+│  Context Engine │  → Analyzes conditions: risk, stability, pressure score
+└────────┬────────┘
+         │
+         ▼
+┌──────────────────────┐
+│  Confidence Engine   │  → Calculates adaptive confidence (with decay + history)
+└────────┬─────────────┘
+         │
+         ▼
+┌──────────────────┐
+│  Decision Engine │  → Selects action: restart / throttle / rollback / recover...
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│   State Engine   │  → Persists state to SQLite (survives crashes)
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────────┐
+│   Recovery Engine    │  → Creates checkpoint, handles retry with back-off
+└──────────────────────┘
 ```
 
 ---
@@ -163,16 +163,16 @@ asyncio.run(main())
 
 Adaptive Runtime is **not** something you run *instead of* your application.
 
-It runs **alongside** your application â€” as a runtime intelligence layer between your business logic and real-world operating conditions.
+It runs **alongside** your application — as a runtime intelligence layer between your business logic and real-world operating conditions.
 
-**Before Adaptive Runtime** â€” your monitoring loop runs, but has no runtime awareness:
+**Before Adaptive Runtime** — your monitoring loop runs, but has no runtime awareness:
 
 ```python
 while True:
     run_api_test_case(...)
 ```
 
-**After Adaptive Runtime** â€” the same loop runs, now with context, confidence, and recovery:
+**After Adaptive Runtime** — the same loop runs, now with context, confidence, and recovery:
 
 ```python
 runtime = Runtime(agent_id="api-watchdog")
@@ -189,31 +189,31 @@ result = await runtime.process({
 run_api_test_case(...)
 ```
 
-The watchdog still performs API monitoring. Adaptive Runtime does not replace it â€” it provides runtime intelligence *around* it.
+The watchdog still performs API monitoring. Adaptive Runtime does not replace it — it provides runtime intelligence *around* it.
 
 ```
 Your Application
-        â”‚
-        â–¼
+        │
+        ▼
 Adaptive Runtime
-        â”‚
- â”œâ”€ Context Engine
- â”œâ”€ Confidence Engine
- â”œâ”€ Decision Engine
- â”œâ”€ State Engine
- â””â”€ Recovery Engine
-        â”‚
-        â–¼
+        │
+ ├─ Context Engine
+ ├─ Confidence Engine
+ ├─ Decision Engine
+ ├─ State Engine
+ └─ Recovery Engine
+        │
+        ▼
 Runtime Actions
 ```
 
-What it adds â€” without touching your application logic:
+What it adds — without touching your application logic:
 
-- **Contextual awareness** â€” understands the operating environment
-- **Confidence scoring** â€” knows how certain a decision is before acting
-- **State persistence** â€” remembers across restarts and crashes
-- **Recovery workflows** â€” restores from checkpoints automatically
-- **Runtime observability** â€” structured metrics and logging built-in
+- **Contextual awareness** — understands the operating environment
+- **Confidence scoring** — knows how certain a decision is before acting
+- **State persistence** — remembers across restarts and crashes
+- **Recovery workflows** — restores from checkpoints automatically
+- **Runtime observability** — structured metrics and logging built-in
 
 ---
 
@@ -222,27 +222,27 @@ What it adds â€” without touching your application logic:
 > **API Watchdog is an independent open-source project created by Jose Fondrej. The project is referenced here solely as an integration example.**  
 > GitHub: [github.com/josefondrej/api-watchdog](https://github.com/josefondrej/api-watchdog)
 
-Adaptive Runtime is not a monitoring tool. It is not a watchdog. It is a runtime intelligence layer that can be added to monitoring tools like API Watchdog â€” without changing any of their existing logic.
+Adaptive Runtime is not a monitoring tool. It is not a watchdog. It is a runtime intelligence layer that can be added to monitoring tools like API Watchdog — without changing any of their existing logic.
 
 API Watchdog continuously monitors endpoints. Failures produce runtime events:
 
 ```
 API Watchdog
-      â”‚
-      â–¼
+      │
+      ▼
 API Failure Event
 (timeout / degraded_service / anomaly_detected / recovery_needed)
-      â”‚
-      â–¼
+      │
+      ▼
 Adaptive Runtime
-      â”‚
- â”œâ”€ Context Engine
- â”œâ”€ Confidence Engine
- â”œâ”€ Decision Engine
- â”œâ”€ State Engine
- â””â”€ Recovery Engine
-      â”‚
-      â–¼
+      │
+ ├─ Context Engine
+ ├─ Confidence Engine
+ ├─ Decision Engine
+ ├─ State Engine
+ └─ Recovery Engine
+      │
+      ▼
 Runtime Action
 ```
 
@@ -358,11 +358,11 @@ See `examples/agent_demo.py` for a complete walkthrough of the Adaptive Runtime 
 Events enter the runtime. The **Context Engine** analyzes conditions. The **Confidence Engine** calculates certainty. The **Decision Engine** selects an action. The **State Engine** persists runtime state. The **Recovery Engine** manages checkpoints.
 
 ```
-service_overload  â†’ throttle_requests
-anomaly_detected  â†’ flag_for_review
-timeout           â†’ cache_warmup
-degraded_service  â†’ health_check
-recovery_needed   â†’ run_recovery
+service_overload  → throttle_requests
+anomaly_detected  → flag_for_review
+timeout           → cache_warmup
+degraded_service  → health_check
+recovery_needed   → run_recovery
 ```
 
 In a production system such as API Watchdog, these events would originate from real monitoring data rather than a demo event list.
@@ -395,7 +395,7 @@ For those scenarios, **ALGOgent Runtime** is usually the better choice.
 
 ## How Adaptive Runtime Differs from LLM Frameworks
 
-LLM frameworks focus on model orchestration â€” prompt chains, RAG pipelines, agent loops.
+LLM frameworks focus on model orchestration — prompt chains, RAG pipelines, agent loops.
 
 Adaptive Runtime focuses on a different layer entirely: runtime behavior, state persistence, recovery, and operational resilience. It does not use a language model internally. It does not require one to function.
 
@@ -406,13 +406,13 @@ Adaptive Runtime focuses on a different layer entirely: runtime behavior, state 
 | **Intelligence source** | Language model | Probabilistic rule engine |
 | **Dependencies** | Heavy (model SDKs, tokenizers) | Minimal (pydantic, aiosqlite) |
 | **GPU required** | Sometimes | **Never** |
-| **Crash recovery** | âŒ | âœ… Built-in |
-| **State persistence** | External setup required | âœ… Built-in SQLite |
-| **Confidence scoring** | âŒ | âœ… Adaptive |
-| **Runs on $5 VPS** | Rarely | âœ… Designed for it |
+| **Crash recovery** | ❌ | ✅ Built-in |
+| **State persistence** | External setup required | ✅ Built-in SQLite |
+| **Confidence scoring** | ❌ | ✅ Adaptive |
+| **Runs on $5 VPS** | Rarely | ✅ Designed for it |
 | **Use case** | Chat, RAG, agents | **Runtime resilience** |
 
-They solve different layers of the stack and can be used together. Adaptive Runtime does not replace LLM frameworks â€” it handles the operational layer they leave unaddressed.
+They solve different layers of the stack and can be used together. Adaptive Runtime does not replace LLM frameworks — it handles the operational layer they leave unaddressed.
 
 ---
 
@@ -423,11 +423,11 @@ They solve different layers of the stack and can be used together. Adaptive Runt
 
 Adaptive Runtime is built around the belief that future AI systems need:
 
-- **Memory** â€” state that survives crashes and restarts
-- **Resilience** â€” self-healing with checkpoints and retry logic  
-- **Contextual behavior** â€” decisions that adapt to real conditions
-- **Confidence awareness** â€” knowing *how certain* a decision is
-- **Lightweight cognition** â€” intelligence without neural dependency
+- **Memory** — state that survives crashes and restarts
+- **Resilience** — self-healing with checkpoints and retry logic  
+- **Contextual behavior** — decisions that adapt to real conditions
+- **Confidence awareness** — knowing *how certain* a decision is
+- **Lightweight cognition** — intelligence without neural dependency
 
 Not just prompts. Not just workflows. **Runtime intelligence.**
 
@@ -445,13 +445,13 @@ await state_engine.patch_state({"last": "ok"})   # Partial update
 ```
 
 ### 2. Context Engine
-Transforms raw signals into contextual understanding â€” no ML needed.
+Transforms raw signals into contextual understanding — no ML needed.
 
 ```python
 ctx = context_engine.analyze({
     "type": "service_overload", "cpu": 94, "memory": 88, "severity": 0.82
 })
-# â†’ risk="high", stability="low", context="resource_pressure", pressure=0.65
+# → risk="high", stability="low", context="resource_pressure", pressure=0.65
 ```
 
 ### 3. Confidence Engine
@@ -459,7 +459,7 @@ Adaptive probabilistic scoring with historical weighting and decay.
 
 ```python
 conf = confidence_engine.calculate(event, context_risk="high")
-# â†’ conf.final = 0.7831  (lower when risk is high, adapts from history)
+# → conf.final = 0.7831  (lower when risk is high, adapts from history)
 
 confidence_engine.record_outcome(success=True, confidence=0.78, context_risk="high")
 ```
@@ -469,7 +469,7 @@ Explainable rule-based action selection. Extensible with custom rules.
 
 ```python
 decision = decision_engine.decide(event, "resource_pressure", "high", 0.78)
-# â†’ action="restart_service", reason="high_resource_pressure", priority="high"
+# → action="restart_service", reason="high_resource_pressure", priority="high"
 
 # Add your own rules:
 custom_rules = [("my_context", "high", 0.70, "my_action", "my_reason")]
@@ -490,12 +490,12 @@ result = await recovery_engine.retry(fn, fallback=fallback_fn)  # Retry with bac
 ## Designed for Constrained Environments
 
 ```
-âœ… Raspberry Pi
-âœ… $5 VPS (512MB RAM)  
-âœ… Old laptop
-âœ… Edge devices
-âœ… Offline / air-gapped systems
-âœ… Serverless (cold start friendly)
+✅ Raspberry Pi
+✅ $5 VPS (512MB RAM)  
+✅ Old laptop
+✅ Edge devices
+✅ Offline / air-gapped systems
+✅ Serverless (cold start friendly)
 ```
 
 No GPU. No cloud lock-in. No heavy ML frameworks.  
@@ -507,44 +507,44 @@ Just Python + asyncio + SQLite.
 
 ```
 adaptive_runtime/
-â”‚
-â”œâ”€â”€ core/
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ confidence_engine.py  # Adaptive probabilistic confidence
-â”‚   â”œâ”€â”€ context_engine.py     # Event â†’ contextual classification
-â”‚   â”œâ”€â”€ decision_engine.py    # Rule-based action selection
-â”‚   â”œâ”€â”€ recovery_engine.py    # Crash recovery + retry orchestration
-â”‚   â””â”€â”€ state_engine.py       # State persistence and memory
-â”‚
-â”œâ”€â”€ observability/
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ logger.py             # Structured color logger
-â”‚   â””â”€â”€ metrics.py            # Lightweight in-memory metrics
-â”‚
-â”œâ”€â”€ runtime/
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ benchmark.py          # Performance benchmarking
-â”‚   â”œâ”€â”€ cache.py              # TTL-based in-memory cache
-â”‚   â”œâ”€â”€ event_bus.py          # Async pub/sub event bus
-â”‚   â””â”€â”€ runtime_manager.py    # Main orchestrator (Runtime class)
-â”‚
-â”œâ”€â”€ storage/
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ memory_store.py       # In-process ephemeral store (testing)
-â”‚   â””â”€â”€ sqlite_store.py       # Async SQLite persistence
-â”‚
-â””â”€â”€ __init__.py
-â”‚
+│
+├── core/
+│   ├── __init__.py
+│   ├── confidence_engine.py  # Adaptive probabilistic confidence
+│   ├── context_engine.py     # Event → contextual classification
+│   ├── decision_engine.py    # Rule-based action selection
+│   ├── recovery_engine.py    # Crash recovery + retry orchestration
+│   └── state_engine.py       # State persistence and memory
+│
+├── observability/
+│   ├── __init__.py
+│   ├── logger.py             # Structured color logger
+│   └── metrics.py            # Lightweight in-memory metrics
+│
+├── runtime/
+│   ├── __init__.py
+│   ├── benchmark.py          # Performance benchmarking
+│   ├── cache.py              # TTL-based in-memory cache
+│   ├── event_bus.py          # Async pub/sub event bus
+│   └── runtime_manager.py    # Main orchestrator (Runtime class)
+│
+├── storage/
+│   ├── __init__.py
+│   ├── memory_store.py       # In-process ephemeral store (testing)
+│   └── sqlite_store.py       # Async SQLite persistence
+│
+└── __init__.py
+│
 examples/
-â”œâ”€â”€ agent_demo.py             # Basic event processing
-â”œâ”€â”€ automation_demo.py        # Retry + crash recovery
-â”œâ”€â”€ demo.yml                  # Demo configuration
-â”œâ”€â”€ demo_record.py            # Demo record helper
-â””â”€â”€ monitoring_demo.py        # Continuous monitoring + event bus
-â”‚
+├── agent_demo.py             # Basic event processing
+├── automation_demo.py        # Retry + crash recovery
+├── demo.yml                  # Demo configuration
+├── demo_record.py            # Demo record helper
+└── monitoring_demo.py        # Continuous monitoring + event bus
+│
 tests/
-â”œâ”€â”€ __init__.py
-â””â”€â”€ test_engines.py           # 12 unit tests â€” all engines
+├── __init__.py
+└── test_engines.py           # 12 unit tests — all engines
 ```
 
 ---
@@ -567,7 +567,7 @@ python examples/automation_demo.py
 # Run tests
 pip install pytest pytest-asyncio
 pytest tests/ -v
-# â†’ 12 passed
+# → 12 passed
 ```
 
 ---
@@ -576,15 +576,15 @@ pytest tests/ -v
 
 | | Feature | Status |
 |---|---|---|
-| âœ… | 5 Core Engines | Tier 1 â€” Released |
-| âœ… | SQLite + Memory store | Tier 1 â€” Released |
-| âœ… | Async event bus | Tier 1 â€” Released |
-| âœ… | Retry + crash recovery | Tier 1 â€” Released |
-| ðŸ”œ | REST API adapter (FastAPI) | Tier 2 |
-| ðŸ”œ | Multi-agent orchestration | Tier 2 |
-| ðŸ”œ | Plugin system | Tier 2 |
-| ðŸ”œ | Real-time dashboard | Tier 2 |
-| ðŸ”œ | Distributed runtime | Tier 3 |
+| ✅ | 5 Core Engines | Tier 1 — Released |
+| ✅ | SQLite + Memory store | Tier 1 — Released |
+| ✅ | Async event bus | Tier 1 — Released |
+| ✅ | Retry + crash recovery | Tier 1 — Released |
+| 🔜 | REST API adapter (FastAPI) | Tier 2 |
+| 🔜 | Multi-agent orchestration | Tier 2 |
+| 🔜 | Plugin system | Tier 2 |
+| 🔜 | Real-time dashboard | Tier 2 |
+| 🔜 | Distributed runtime | Tier 3 |
 
 ---
 
@@ -600,7 +600,7 @@ Measured on a mid-range Windows laptop (Python 3.10, SQLite, no GPU).
 | SQLite save latency | 36.5 ms avg (n=50) |
 | SQLite load latency | 2.7 ms avg (n=50) |
 | Event processing | 109.2 ms avg (n=50) |
-| GPU required | âŒ Never |
+| GPU required | ❌ Never |
 
 > Runs comfortably on a $5 VPS (512MB RAM). No GPU. No cloud lock-in.
 
@@ -610,7 +610,7 @@ Measured on a mid-range Windows laptop (Python 3.10, SQLite, no GPU).
 
 Adaptive Runtime is part of the **Stateflow Labs runtime intelligence ecosystem**.
 
-ðŸŒ [https://stateflow-dev.github.io/stateflowlabs/](https://stateflow-dev.github.io/stateflowlabs/)
+🌐 [https://stateflow-dev.github.io/stateflowlabs/](https://stateflow-dev.github.io/stateflowlabs/)
 
 ### Related Project: ALGOgent Runtime
 
@@ -627,10 +627,10 @@ The two projects are often confused. Here is the clearest way to think about the
 | **Typical use** | AI pipelines, tool execution, automation | Monitoring daemons, AI workers, edge systems |
 
 **Rule of thumb:**
-- Your script runs once and exits â†’ **ALGOgent Runtime**
-- Your service runs continuously and must survive failure â†’ **Adaptive Runtime**
+- Your script runs once and exits → **ALGOgent Runtime**
+- Your service runs continuously and must survive failure → **Adaptive Runtime**
 
-Neither project is positioned as AGI, autonomous AI, or chatbot infrastructure. Both are **runtime tools** â€” reliable, observable, and production-ready.
+Neither project is positioned as AGI, autonomous AI, or chatbot infrastructure. Both are **runtime tools** — reliable, observable, and production-ready.
 
 ---
 
@@ -656,7 +656,7 @@ Issues and PRs welcome. Please open an issue first for major changes.
 
 ## License
 
-MIT Â© [Stateflow Labs](https://github.com/stateflow-dev)
+MIT © [Stateflow Labs](https://github.com/stateflow-dev)
 
 ---
 
