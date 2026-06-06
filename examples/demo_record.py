@@ -21,7 +21,7 @@ import os
 # Tambah root repo ke path agar import runtime/ bisa jalan
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from runtime.runtime_manager import Runtime
+from adaptive_runtime.runtime.runtime_manager import Runtime
 
 # ── ANSI colors ────────────────────────────────────────────
 RESET   = "\033[0m"
