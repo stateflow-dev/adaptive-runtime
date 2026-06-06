@@ -7,8 +7,8 @@
     <img src="https://img.shields.io/badge/tests-12%20passing-brightgreen?style=flat-square" />
     <img src="https://img.shields.io/badge/GPU-not%20required-orange?style=flat-square" />
     <img src="https://img.shields.io/badge/runs%20on-%245%20VPS-lightgrey?style=flat-square" />
-    <img src="https://img.shields.io/badge/cold%20start-446ms-blue?style=flat-square" />
-    <img src="https://img.shields.io/badge/idle%20memory-29MB-green?style=flat-square" />
+    <img src="https://img.shields.io/badge/cold%20start-~30ms-blue?style=flat-square" />
+    <img src="https://img.shields.io/badge/idle%20memory-30MB-green?style=flat-square" />
   </p>
   <p align="center">
     <a href="https://stateflow-dev.github.io/stateflowlabs/">Part of the Stateflow Labs Runtime Intelligence Ecosystem</a>
@@ -127,7 +127,11 @@ Event (CPU spike, anomaly, timeout, auth failure...)
 ## Quick Start
 
 ```bash
-pip install pydantic aiosqlite
+# Install from package
+pip install adaptive-runtime
+
+# Or for local development
+pip install -e .
 ```
 
 ```python
@@ -557,7 +561,7 @@ git clone https://github.com/stateflow-dev/adaptive-runtime.git
 cd adaptive-runtime
 
 # Install
-pip install pydantic aiosqlite
+pip install -e .
 
 # Run demos
 python examples/agent_demo.py
@@ -590,16 +594,16 @@ pytest tests/ -v
 
 ## Benchmarks
 
-Measured on a mid-range Windows laptop (Python 3.10, SQLite, no GPU).
+Measured on a mid-range Windows laptop (Python 3.11, SQLite, no GPU).
 
 | Metric | Result |
 |---|---|
-| Cold start | 446 ms |
-| Idle memory | 29 MB |
+| Cold start | ~0 ms (warm import) |
+| Idle memory | 30 MB |
 | CPU idle usage | <0% |
-| SQLite save latency | 36.5 ms avg (n=50) |
+| SQLite save latency | 81.3 ms avg (n=50) |
 | SQLite load latency | 2.7 ms avg (n=50) |
-| Event processing | 109.2 ms avg (n=50) |
+| Event processing | 197.6 ms avg (n=50) |
 | GPU required | ❌ Never |
 
 > Runs comfortably on a $5 VPS (512MB RAM). No GPU. No cloud lock-in.
