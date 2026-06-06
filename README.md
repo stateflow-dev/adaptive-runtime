@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/runs%20on-%245%20VPS-lightgrey?style=flat-square" />
     <img src="https://img.shields.io/badge/cold%20start-531ms-blue?style=flat-square" />
     <img src="https://img.shields.io/badge/idle%20memory-28MB-green?style=flat-square" />
-    <img src="https://github.com/stateflow-dev/adaptive-runtime/actions/workflows/ci.yml/badge.svg" />
+    <a href="https://github.com/stateflow-dev/adaptive-runtime/actions/workflows/ci.yml"><img src="https://github.com/stateflow-dev/adaptive-runtime/actions/workflows/ci.yml/badge.svg" /></a>
   </p>
   <p align="center">
     <a href="https://stateflow-dev.github.io/stateflowlabs/">Part of the Stateflow Labs Runtime Intelligence Ecosystem</a>
