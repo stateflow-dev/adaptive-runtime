@@ -1,4 +1,4 @@
-"""
+﻿"""
 Async SQLite persistence layer for runtime state and snapshots.
 """
 
@@ -47,7 +47,6 @@ class SQLiteStore:
         """)
         await self._db.commit()
 
-    # ── State ──────────────────────────────────────────────────────────────
 
     async def save_state(self, agent_id: str, state: dict) -> None:
         now = datetime.utcnow().isoformat()
@@ -68,7 +67,6 @@ class SQLiteStore:
             row = await cur.fetchone()
         return json.loads(row[0]) if row else None
 
-    # ── Snapshots ──────────────────────────────────────────────────────────
 
     async def save_snapshot(self, agent_id: str, snapshot: dict) -> int:
         now = datetime.utcnow().isoformat()
@@ -95,7 +93,6 @@ class SQLiteStore:
             rows = await cur.fetchall()
         return [{"id": r[0], "created": r[1], **json.loads(r[2])} for r in rows]
 
-    # ── Event log ──────────────────────────────────────────────────────────
 
     async def log_event(
         self, agent_id: str, event_type: str, payload: dict, outcome: dict | None = None
@@ -127,3 +124,5 @@ class SQLiteStore:
     async def close(self) -> None:
         if self._db:
             await self._db.close()
+
+

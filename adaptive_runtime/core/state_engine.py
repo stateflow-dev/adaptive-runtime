@@ -1,12 +1,12 @@
-"""
-State Engine — manages runtime persistence and state memory.
+﻿"""
+State Engine - manages runtime persistence and state memory.
 """
 
 from datetime import datetime
 from typing import Any
 
-from observability.logger import get_logger
-from observability.metrics import metrics
+from ..observability.logger import get_logger
+from ..observability.metrics import metrics
 
 logger = get_logger("state_engine")
 
@@ -24,7 +24,6 @@ class StateEngine:
         self.agent_id = agent_id
         self._state: dict[str, Any] = {}
 
-    # ── Public API ─────────────────────────────────────────────────────────
 
     async def save_state(self, state: dict) -> None:
         self._state.update(state)
@@ -56,3 +55,5 @@ class StateEngine:
     @property
     def current(self) -> dict:
         return dict(self._state)
+
+

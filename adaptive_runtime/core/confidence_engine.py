@@ -1,5 +1,5 @@
-"""
-Confidence Engine — adaptive probabilistic confidence scoring.
+﻿"""
+Confidence Engine - adaptive probabilistic confidence scoring.
 """
 
 import math
@@ -8,8 +8,8 @@ from dataclasses import dataclass, field
 from typing import Deque
 
 from pydantic import BaseModel
-from observability.logger import get_logger
-from observability.metrics import metrics
+from ..observability.logger import get_logger
+from ..observability.metrics import metrics
 
 logger = get_logger("confidence_engine")
 
@@ -56,7 +56,6 @@ class ConfidenceEngine:
         self._history: Deque[OutcomeRecord] = deque(maxlen=history_window)
         self._call_count = 0
 
-    # ── Public API ─────────────────────────────────────────────────────────
 
     def calculate(self, event: dict, context_risk: str) -> ConfidenceResult:
         self._call_count += 1
@@ -80,7 +79,7 @@ class ConfidenceEngine:
         )
         metrics.record("confidence.final", final)
         logger.info(
-            "Confidence → base=%.2f  decay=%.2f  hist=%.2f  ctx=%.2f  final=%.4f",
+            "Confidence â†’ base=%.2f  decay=%.2f  hist=%.2f  ctx=%.2f  final=%.4f",
             base, decay, hist_weight, ctx_adj, final,
         )
         return result
@@ -94,7 +93,6 @@ class ConfidenceEngine:
         ))
         logger.debug("Outcome recorded: success=%s  conf=%.3f", success, confidence)
 
-    # ── Internals ──────────────────────────────────────────────────────────
 
     def _decay_factor(self) -> float:
         """Confidence decays slightly as call volume grows (simulate drift)."""
@@ -106,5 +104,7 @@ class ConfidenceEngine:
         if len(relevant) < 3:
             return 1.0
         success_rate = sum(1 for r in relevant if r.success) / len(relevant)
-        # Map [0, 1] success rate → [0.6, 1.1] weight
+        # Map [0, 1] success rate â†’ [0.6, 1.1] weight
         return 0.6 + success_rate * 0.5
+
+

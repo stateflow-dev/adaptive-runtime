@@ -1,5 +1,5 @@
-"""
-In-process memory store — useful for testing or ephemeral agents.
+﻿"""
+In-process memory store - useful for testing or ephemeral agents.
 Mirrors the SQLiteStore async API.
 """
 
@@ -54,3 +54,5 @@ class MemoryStore:
 
     async def close(self) -> None:
         pass
+
+

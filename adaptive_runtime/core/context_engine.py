@@ -1,15 +1,14 @@
-"""
-Context Engine — transforms raw events into contextual understanding.
+﻿"""
+Context Engine - transforms raw events into contextual understanding.
 """
 
 from pydantic import BaseModel, Field
-from observability.logger import get_logger
-from observability.metrics import metrics
+from ..observability.logger import get_logger
+from ..observability.metrics import metrics
 
 logger = get_logger("context_engine")
 
 
-# ── Models ─────────────────────────────────────────────────────────────────
 
 class RawEvent(BaseModel):
     type: str
@@ -29,7 +28,6 @@ class ContextResult(BaseModel):
     tags: list[str]
 
 
-# ── Thresholds ─────────────────────────────────────────────────────────────
 
 _RISK_RULES: list[tuple[float, str]] = [
     (0.85, "critical"),
@@ -56,13 +54,12 @@ _CONTEXT_MAP: dict[str, str] = {
 }
 
 
-# ── Engine ─────────────────────────────────────────────────────────────────
 
 class ContextEngine:
     """
     Classifies events and scores runtime context.
 
-    Uses lightweight rule-based scoring — no ML dependencies.
+    Uses lightweight rule-based scoring - no ML dependencies.
     """
 
     def __init__(self, custom_context_map: dict[str, str] | None = None):
@@ -88,12 +85,11 @@ class ContextEngine:
 
         metrics.record("context.pressure", pressure)
         logger.info(
-            "Context → risk=%s  stability=%s  ctx=%s  pressure=%.2f",
+            "Context â†’ risk=%s  stability=%s  ctx=%s  pressure=%.2f",
             risk, stability, context_label, pressure,
         )
         return result
 
-    # ── Internals ──────────────────────────────────────────────────────────
 
     def _pressure_score(self, raw: RawEvent) -> float:
         """Weighted composite score in [0, 1]."""
@@ -132,3 +128,5 @@ class ContextEngine:
         if raw.latency_ms > 2000:
             tags.append("latency:high")
         return tags
+
+

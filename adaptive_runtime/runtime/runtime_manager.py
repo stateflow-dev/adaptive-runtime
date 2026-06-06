@@ -1,5 +1,5 @@
-"""
-Runtime Manager — central orchestrator of all engines.
+﻿"""
+Runtime Manager - central orchestrator of all engines.
 
 Usage:
     from adaptive_runtime import Runtime
@@ -11,25 +11,23 @@ Usage:
 """
 
 import asyncio
-import sys
-import os
-
-# Make sure sibling packages are importable when run from the project root
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pydantic import BaseModel
 
-from core.state_engine import StateEngine
-from core.context_engine import ContextEngine
-from core.confidence_engine import ConfidenceEngine
-from core.decision_engine import DecisionEngine
-from core.recovery_engine import RecoveryEngine
-from runtime.event_bus import EventBus
-from runtime.cache import TTLCache
-from storage.sqlite_store import SQLiteStore
-from storage.memory_store import MemoryStore
-from observability.logger import get_logger
-from observability.metrics import metrics
+from ..core.state_engine import StateEngine
+from ..core.context_engine import ContextEngine
+from ..core.confidence_engine import ConfidenceEngine
+from ..core.decision_engine import DecisionEngine
+from ..core.recovery_engine import RecoveryEngine
+
+from .event_bus import EventBus
+from .cache import TTLCache
+
+from ..storage.sqlite_store import SQLiteStore
+from ..storage.memory_store import MemoryStore
+
+from ..observability.logger import get_logger
+from ..observability.metrics import metrics
 
 logger = get_logger("runtime")
 
@@ -47,7 +45,7 @@ class RuntimeResult(BaseModel):
 
 class Runtime:
     """
-    Adaptive Runtime — wires all engines together into a single
+    Adaptive Runtime - wires all engines together into a single
     event-driven processing loop.
 
     Args:
@@ -81,7 +79,6 @@ class Runtime:
         self.bus   = EventBus()
         self._cache = TTLCache(default_ttl=30.0)
 
-    # ── Lifecycle ──────────────────────────────────────────────────────────
 
     async def start(self) -> None:
         """Connect storage and restore any previous state."""
@@ -95,18 +92,17 @@ class Runtime:
         self._started = False
         logger.info("Runtime stopped  agent_id='%s'", self.agent_id)
 
-    # ── Main processing API ────────────────────────────────────────────────
 
     async def process(self, event: dict) -> RuntimeResult:
         """
         Full pipeline:
-          Event → Context → Confidence → Decision → State → Recovery
+          Event â†’ Context â†’ Confidence â†’ Decision â†’ State â†’ Recovery
         """
         if not self._started:
             await self.start()
 
         etype = event.get("type", "unknown")
-        logger.info("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        logger.info("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”")
         logger.info("Event received: %s", etype)
 
         self._event_count += 1
@@ -170,19 +166,19 @@ class Runtime:
             state_persisted=True,
             checkpoint_created=checkpoint_created,
         )
-        logger.info("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+        logger.info("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”\n")
         return result
 
-    # ── Recovery helpers ───────────────────────────────────────────────────
 
     async def recover(self) -> dict:
         """Manually trigger crash recovery."""
         return await self._recovery.crash_recovery(self._state)
 
-    # ── Observability ──────────────────────────────────────────────────────
 
     def metrics_summary(self) -> dict:
         return metrics.summary()
 
     async def event_history(self, limit: int = 20) -> list[dict]:
         return await self._store.recent_events(self.agent_id, limit)
+
+

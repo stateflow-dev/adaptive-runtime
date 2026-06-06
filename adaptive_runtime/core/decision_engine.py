@@ -1,10 +1,10 @@
-"""
-Decision Engine — generates adaptive runtime decisions.
+﻿"""
+Decision Engine - generates adaptive runtime decisions.
 """
 
 from pydantic import BaseModel
-from observability.logger import get_logger
-from observability.metrics import metrics
+from ..observability.logger import get_logger
+from ..observability.metrics import metrics
 
 logger = get_logger("decision_engine")
 
@@ -17,8 +17,7 @@ class DecisionResult(BaseModel):
     metadata: dict = {}
 
 
-# ── Action ruleset ─────────────────────────────────────────────────────────
-# Each rule: (context_label, risk_level, min_confidence) → action
+# Each rule: (context_label, risk_level, min_confidence) â†’ action
 # Evaluated top-to-bottom; first match wins.
 
 _RULES: list[tuple[str | None, str | None, float, str, str]] = [
@@ -79,12 +78,11 @@ class DecisionEngine:
         )
         metrics.record("decision.confidence", confidence)
         logger.info(
-            "Decision → action=%s  confidence=%.3f  reason=%s  priority=%s",
+            "Decision â†’ action=%s  confidence=%.3f  reason=%s  priority=%s",
             action, confidence, reason, priority,
         )
         return result
 
-    # ── Internals ──────────────────────────────────────────────────────────
 
     def _match(self, context: str, risk: str, confidence: float) -> tuple[str, str]:
         for ctx_rule, risk_rule, min_conf, action, reason in self._rules:
@@ -94,3 +92,5 @@ class DecisionEngine:
             if ctx_ok and risk_ok and conf_ok:
                 return action, reason
         return "monitor_and_wait", "no_matching_rule"
+
+

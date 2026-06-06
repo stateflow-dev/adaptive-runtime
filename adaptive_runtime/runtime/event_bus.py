@@ -1,12 +1,12 @@
-"""
-Async event bus — pub/sub within a single runtime process.
+﻿"""
+Async event bus - pub/sub within a single runtime process.
 """
 
 import asyncio
 from collections import defaultdict
 from typing import Callable, Awaitable
 
-from observability.logger import get_logger
+from ..observability.logger import get_logger
 
 logger = get_logger("event_bus")
 
@@ -32,7 +32,7 @@ class EventBus:
         self._wildcard: list[Handler] = []
 
     def subscribe(self, event_type: str):
-        """Decorator — registers a handler for a specific event type."""
+        """Decorator - registers a handler for a specific event type."""
         def decorator(fn: Handler) -> Handler:
             self._handlers[event_type].append(fn)
             logger.debug("Subscribed handler '%s' to event '%s'", fn.__name__, event_type)
@@ -56,3 +56,5 @@ class EventBus:
 
         await asyncio.gather(*[h(event) for h in handlers], return_exceptions=True)
         return len(handlers)
+
+

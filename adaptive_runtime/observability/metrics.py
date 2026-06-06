@@ -1,4 +1,4 @@
-"""
+﻿"""
 In-memory lightweight metrics collector.
 """
 
@@ -49,3 +49,5 @@ class MetricsCollector:
 
 # Module-level singleton
 metrics = MetricsCollector()
+
+

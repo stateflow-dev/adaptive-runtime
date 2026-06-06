@@ -6,12 +6,14 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pytest
-from storage.memory_store import MemoryStore
-from core.state_engine import StateEngine
-from core.context_engine import ContextEngine
-from core.confidence_engine import ConfidenceEngine
-from core.decision_engine import DecisionEngine
-from core.recovery_engine import RecoveryEngine
+
+from adaptive_runtime.storage.memory_store import MemoryStore
+
+from adaptive_runtime.core.state_engine import StateEngine
+from adaptive_runtime.core.context_engine import ContextEngine
+from adaptive_runtime.core.confidence_engine import ConfidenceEngine
+from adaptive_runtime.core.decision_engine import DecisionEngine
+from adaptive_runtime.core.recovery_engine import RecoveryEngine
 
 
 # ── State Engine ───────────────────────────────────────────────────────────

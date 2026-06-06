@@ -1,5 +1,5 @@
-"""
-Recovery Engine — self-healing runtime resilience.
+﻿"""
+Recovery Engine - self-healing runtime resilience.
 """
 
 import asyncio
@@ -7,8 +7,8 @@ from datetime import datetime
 from typing import Callable, Awaitable
 
 from pydantic import BaseModel
-from observability.logger import get_logger
-from observability.metrics import metrics
+from ..observability.logger import get_logger
+from ..observability.metrics import metrics
 
 logger = get_logger("recovery_engine")
 
@@ -36,7 +36,6 @@ class RecoveryEngine:
         self.base_delay = base_delay
         self._last_checkpoint: CheckpointMeta | None = None
 
-    # ── Checkpointing ──────────────────────────────────────────────────────
 
     async def create_checkpoint(self, state: dict) -> CheckpointMeta:
         snap_id = await self.store.save_snapshot(
@@ -64,7 +63,6 @@ class RecoveryEngine:
         logger.warning("No snapshot found for agent '%s'", self.agent_id)
         return None
 
-    # ── Retry orchestration ────────────────────────────────────────────────
 
     async def retry(
         self,
@@ -87,7 +85,7 @@ class RecoveryEngine:
                 last_exc = exc
                 delay = self.base_delay * (2 ** (attempt - 1))
                 logger.warning(
-                    "Attempt %d/%d failed: %s — retrying in %.1fs",
+                    "Attempt %d/%d failed: %s - retrying in %.1fs",
                     attempt, self.max_retries, exc, delay,
                 )
                 metrics.record("recovery.retry_fail", 1)
@@ -101,7 +99,6 @@ class RecoveryEngine:
             return await fallback()
         raise last_exc
 
-    # ── Crash recovery ─────────────────────────────────────────────────────
 
     async def crash_recovery(self, state_engine) -> dict:
         """
@@ -122,5 +119,7 @@ class RecoveryEngine:
             logger.info("[Recovery] State recovered from snapshot.")
             return snap
 
-        logger.error("[Recovery] No recoverable state found — starting fresh.")
+        logger.error("[Recovery] No recoverable state found - starting fresh.")
         return {}
+
+

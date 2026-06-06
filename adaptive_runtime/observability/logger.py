@@ -1,4 +1,4 @@
-"""
+﻿"""
 Structured logger for Adaptive Runtime.
 """
 
@@ -37,3 +37,5 @@ class _RuntimeFormatter(logging.Formatter):
         ts = datetime.now().strftime("%H:%M:%S")
         tag = record.name.split(".")[-1].upper()
         return f"{color}[{ts}][{tag}]{self.RESET} {record.getMessage()}"
+
+

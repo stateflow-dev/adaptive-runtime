@@ -7,7 +7,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from runtime.runtime_manager import Runtime
+from adaptive_runtime.runtime.runtime_manager import Runtime
 
 
 async def main():
