@@ -102,7 +102,7 @@ class Runtime:
             await self.start()
 
         etype = event.get("type", "unknown")
-        logger.info("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”")
+        logger.info("-" * 45)
         logger.info("Event received: %s", etype)
 
         self._event_count += 1
@@ -166,7 +166,7 @@ class Runtime:
             state_persisted=True,
             checkpoint_created=checkpoint_created,
         )
-        logger.info("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”\n")
+        logger.info("-" * 45)
         return result
 
 
