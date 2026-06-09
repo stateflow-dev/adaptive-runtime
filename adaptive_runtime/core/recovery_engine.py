@@ -1,4 +1,4 @@
-﻿"""
+"""
 Recovery Engine - self-healing runtime resilience.
 """
 

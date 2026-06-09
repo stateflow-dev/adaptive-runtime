@@ -1,4 +1,4 @@
-﻿"""
+"""
 Decision Engine - generates adaptive runtime decisions.
 """
 
@@ -17,7 +17,7 @@ class DecisionResult(BaseModel):
     metadata: dict = {}
 
 
-# Each rule: (context_label, risk_level, min_confidence) â†’ action
+# Each rule: (context_label, risk_level, min_confidence) → action
 # Evaluated top-to-bottom; first match wins.
 
 _RULES: list[tuple[str | None, str | None, float, str, str]] = [
@@ -78,7 +78,7 @@ class DecisionEngine:
         )
         metrics.record("decision.confidence", confidence)
         logger.info(
-            "Decision â†’ action=%s  confidence=%.3f  reason=%s  priority=%s",
+            "Decision → action=%s  confidence=%.3f  reason=%s  priority=%s",
             action, confidence, reason, priority,
         )
         return result

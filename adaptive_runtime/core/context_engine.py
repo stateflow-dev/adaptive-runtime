@@ -1,4 +1,4 @@
-﻿"""
+"""
 Context Engine - transforms raw events into contextual understanding.
 """
 
@@ -85,7 +85,7 @@ class ContextEngine:
 
         metrics.record("context.pressure", pressure)
         logger.info(
-            "Context â†’ risk=%s  stability=%s  ctx=%s  pressure=%.2f",
+            "Context → risk=%s  stability=%s  ctx=%s  pressure=%.2f",
             risk, stability, context_label, pressure,
         )
         return result

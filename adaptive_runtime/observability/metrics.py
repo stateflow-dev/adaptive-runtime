@@ -1,4 +1,4 @@
-﻿"""
+"""
 In-memory lightweight metrics collector.
 """
 

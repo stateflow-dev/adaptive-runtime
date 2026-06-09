@@ -1,4 +1,4 @@
-﻿"""
+"""
 Async SQLite persistence layer for runtime state and snapshots.
 """
 

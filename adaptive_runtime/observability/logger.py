@@ -1,4 +1,4 @@
-﻿"""
+"""
 Structured logger for Adaptive Runtime.
 """
 

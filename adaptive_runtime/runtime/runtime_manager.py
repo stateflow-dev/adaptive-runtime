@@ -1,4 +1,4 @@
-﻿"""
+"""
 Runtime Manager - central orchestrator of all engines.
 
 Usage:
@@ -96,7 +96,7 @@ class Runtime:
     async def process(self, event: dict) -> RuntimeResult:
         """
         Full pipeline:
-          Event â†’ Context â†’ Confidence â†’ Decision â†’ State â†’ Recovery
+          Event → Context → Confidence → Decision → State → Recovery
         """
         if not self._started:
             await self.start()

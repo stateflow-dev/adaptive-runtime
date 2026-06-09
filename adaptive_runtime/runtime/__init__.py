@@ -1,4 +1,4 @@
-﻿from .runtime_manager import Runtime, RuntimeResult
+from .runtime_manager import Runtime, RuntimeResult
 from .event_bus import EventBus
 from .cache import TTLCache
 
