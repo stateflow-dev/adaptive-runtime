@@ -562,7 +562,7 @@ git clone https://github.com/stateflow-dev/adaptive-runtime.git
 cd adaptive-runtime
 
 # Install
-pip install -e .
+pip install adaptive-runtime
 
 # Run demos
 python examples/agent_demo.py
