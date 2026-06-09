@@ -1,4 +1,4 @@
-﻿"""
+"""
 In-process memory store - useful for testing or ephemeral agents.
 Mirrors the SQLiteStore async API.
 """

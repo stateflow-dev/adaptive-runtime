@@ -1,4 +1,4 @@
-﻿"""
+"""
 Async event bus - pub/sub within a single runtime process.
 """
 

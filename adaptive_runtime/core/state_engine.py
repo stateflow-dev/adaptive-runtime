@@ -1,4 +1,4 @@
-﻿"""
+"""
 State Engine - manages runtime persistence and state memory.
 """
 

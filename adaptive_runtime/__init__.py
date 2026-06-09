@@ -1,4 +1,4 @@
-﻿"""
+"""
 Adaptive Runtime
 """
 

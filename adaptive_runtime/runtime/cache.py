@@ -1,4 +1,4 @@
-﻿"""
+"""
 Lightweight TTL-based in-memory cache for the runtime.
 """
 
@@ -13,7 +13,7 @@ class TTLCache:
     """
 
     def __init__(self, default_ttl: float = 60.0):
-        self._store: dict[str, tuple[any, float]] = {}  # key â†’ (value, expires_at)
+        self._store: dict[str, tuple[any, float]] = {}  # key → (value, expires_at)
         self._default_ttl = default_ttl
         self._lock = Lock()
 
