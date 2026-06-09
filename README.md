@@ -595,7 +595,7 @@ pytest tests/ -v
 
 ## Benchmarks
 
-Measured on a mid-range Windows laptop (Python 3.11, SQLite, no GPU).
+Measured on a mid-range Windows laptop (Python 3.10, SQLite, no GPU).
 
 | Metric | Result |
 |---|---|
