@@ -2,7 +2,7 @@
   <h1 align="center">Adaptive Runtime</h1>
   <p align="center"><b>Runtime Intelligence Layer for Long-Running Systems</b></p>
   <p align="center">
-    <img src="https://img.shields.io/badge/python-3.11+-blue?style=flat-square" />
+    <img src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square" />
     <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" />
     <img src="https://img.shields.io/badge/tests-12%20passing-brightgreen?style=flat-square" />
     <img src="https://img.shields.io/badge/GPU-not%20required-orange?style=flat-square" />
